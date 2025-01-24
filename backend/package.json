@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "start": "knex migrate:latest && bun server.js",
-    "dev": "cross-env NODE_ENV=development && knex migrate:latest && nodemon",
+    "start": "node api.js && knex migrate:latest && bun server.js",
+    "dev": "node api.js && cross-env NODE_ENV=development && knex migrate:latest && nodemon",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run"
   },
